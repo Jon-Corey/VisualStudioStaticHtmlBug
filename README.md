@@ -37,6 +37,7 @@ The exception: System.IO.InvalidDataException: The archive entry was compressed 
 - The error only happens if accessing the HTML file using a browser. `curl` does not trigger the exception.
 - Running the project with the `dotnet` CLI does not result in any issues, even when both use the same launch profile, web server (Kestrel), and SDK version.
 - This issue affects more than just Web API projects. It also affects Blazor and Blazor WASM (and possibly more project types).
+- When using `app.UseStaticFiles();` instead of `app.MapStaticAssets();`, the issue does not occur.
 
 ## My Version Info
 
